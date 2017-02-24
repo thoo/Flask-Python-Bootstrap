@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+    {{ result[0]|safe }}
+</head>
+<body>
+<div class="container"> 
+<div class="page-header">
+  <h1> Multiple Choice [ Index Page or Place Holder] </h1>
+</div>
+<p>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+     equationNumbers: {  autoNumber: "AMS"  },
+     extensions: ["AMSmath.js", "AMSsymbols.js", "autobold.js"]
+  }
+});
+</script>
+
+<script type="text/javascript" src=
+"http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+This web page visualizes the function \(
+u(t) = Ae^{-bt}\sin (w t), \hbox{ for } t\in [0,T]
+\).
+
+
+
+</p>
+<div class="container-fluid">
+
+<form method=post action="">
+<table class="table table-hover table-sm">
+  {% for field in form %}
+  <tbody>
+    <tr>
+    <td class="col-xs-1 col-sm-1 col-md-1 col-lg-1">\( {{ field.name }} \)</td>
+    <td class="col-xs-6 col-sm-6 col-md-8 col-lg-8">{{ field }}</td>
+    
+    {% if field.errors %}
+      <td><ul class=errors>
+      {% for error in field.errors %}
+        <li><font color="red">{{ error }}</font></li>
+      {% endfor %}</ul></td>
+    {% endif %}
+    </tr>
+    <tbody>
+  {% endfor %}
+
+</table>
+</div>
+<p>
+</p>
+<div class="container">
+
+        <p>
+        <button type="submit" class="btn-primary btn-lg" value="Compute" > Submit</button>  
+        </p>
+        </div>
+</form>
+
+
+<div class="container">
+{% if result != None %}
+<p>
+
+<!-- script and div elements for Bokeh plot -->
+{{ result[1]|safe }}
+{{ result[2]|safe }}
+
+
+<!-- script and div elements for Bokeh plot -->
+{{ result[3]|safe }}
+{{ result[4]|safe }}
+</p>
+{% endif %}
+
+</div>
+</body>
+</html>

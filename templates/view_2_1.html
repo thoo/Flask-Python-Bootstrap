@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+
+    {{ result[0]|safe }}
+</head>
+<body>
+<div class="container">
+<div class="page-header">
+  <h1> Visualization for World Development Indicators Data Set</h1>
+  <hr>
+  <h2> Data Description </h2>
+
+  <blockquote class="blockquote">
+  <p class="mb-0">The primary World Bank collection of development indicators, compiled from officially-recognized international sources. It presents the most current and accurate global development data available, and includes national, regional and global estimates. More information can be found about this data set <a href="http://data.worldbank.org/data-catalog/world-development-indicators">here</a>.
+
+
+  </p>
+</blockquote>
+<p>
+  This development indicators data set includes many valuable information such as gross domestic product <strong> (GDP) </strong> per capita, gross national income <strong> (GNI) </strong> growth, life expectancy and so on. From the following tabs, you can select up to eight countries and categories to compare development among nations based on their indicators. 
+
+</p>
+</div>
+
+<div class="row">
+            <div class="col-md-10 col-md-offset-0">
+<form action="" method=post>
+
+                    {{ form.hidden_tag() }}
+
+
+
+                    <div class="form-group1" >
+                        <h4>{{ form.multi_select.label }}</h4>
+                        <small class="text-muted">{{ form.multi_select.description }}</small>
+
+                        {{ form.multi_select(class_="form-control") }}
+
+                        {% for error in form.multi_select.errors %}
+                        <span class="label label-danger">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    <p>
+                    </p>
+                    <div class="form-group2" >
+                        <h4>{{ form.multi_select_plot.label }}</h4>
+                        <small class="text-muted">{{ form.multi_select_plot.description }}</small>
+
+                        {{ form.multi_select_plot(class_="form-control") }}
+
+                        {% for error in form.multi_select_plot.errors %}
+                        <span class="label label-danger">{{ error }}</span>
+                        {% endfor %}
+                    </div>
+
+                    <p>
+                    </p>
+
+                    {{ form.submit(class_="btn btn-primary btn-lg") }}
+                </form>
+</div>
+        </div>
+
+<div class="container">
+{% if result != None %}
+<p>
+
+<!-- script and div elements for Bokeh plot -->
+{% for item in result[1:] %}
+{{ item[0]|safe }}
+{{ item[1]|safe }}
+{% endfor %}
+</p>
+{% endif %}
+
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        // https://select2.github.io/examples.html
+
+
+
+    $("select").select2({
+      maximumSelectionLength: 6
+    });
+});
+</script>
+</body>
+</html>

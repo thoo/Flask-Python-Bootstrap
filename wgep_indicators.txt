@@ -1,0 +1,61 @@
+Change in Inventories, constant LCU, millions|NEGDISTKBKN
+Change in Inventories, constant US$, millions|NEGDISTKBKD
+Change in Inventories, current LCU, millions|NEGDISTKBCN
+Change in Inventories, current US$, millions|NEGDISTKBCD
+Current Account Balance, %GDP|BNCABFUNDCD_
+Current Account Balance, current US$, millions|BNCABFUNDCD
+DEC exchange rate (LCU per US$)|PANUSATLS
+Estimated Capital stock (real 2005 USD)|NEGDIKSTKKD
+Estimated Capital stock (real local currency units, various base years)|NEGDIKSTKKN
+Estimated Potential GDP (real local currency units, various base years)|NYGDPPOTLKN
+Exports GNFS deflator, LCU|NEEXPGNFSXN
+Exports GNFS, BOP, current US$, millions|BXGSRGNFSCD
+Exports GNFS, constant LCU, millions|NEEXPGNFSKN
+Exports GNFS, constant US$, millions|NEEXPGNFSKD
+Exports GNFS, current LCU, millions|NEEXPGNFSCN
+Exports GNFS, current US$, millions|NEEXPGNFSCD
+Exports, GNFS (implicit price deflator constant 2005 USD)|NEEXPGNFSXD
+Fixed Investment deflator, LCU|NEGDIFTOTXN
+Fixed Investment, constant LCU, millions|NEGDIFTOTKN
+Fixed Investment, constant US$, millions|NEGDIFTOTKD
+Fixed Investment, current LCU, millions|NEGDIFTOTCN
+Fixed Investment, current US$, millions|NEGDIFTOTCD
+GDP (implicit price deflator contant 2005 USD)|NYGDPMKTPXD
+GDP deflator, LCU|NYGDPMKTPXN
+GDP Discrepancy, constant LCU, millions|NYGDPDISCKN
+GDP Discrepancy, constant US$, millions|NYGDPDISCKD
+GDP Discrepancy, current LCU, millions|NYGDPDISCCN
+GDP Discrepancy, current US$, millions|NYGDPDISCCD
+GDP per Capita, constant US$, millions|GDPPCKD
+GDP Potential, constant US$, millions|NYGDPPOTLKD
+GDP, constant LCU, millions|NYGDPMKTPKN
+GDP, constant US$, millions|NYGDPMKTPKD
+GDP, current LCU, millions|NYGDPMKTPCN
+GDP, current US$, millions|NYGDPMKTPCD
+General Govt. Balance, %GDP|GGBALOVRLCD_
+General Govt. Balance, current US$, millions|GGBALOVRLCD
+Government Consumption (implicit price deflator constant 2005 USD)|NECONGOVTXD
+Government Consumption deflator, LCU|NECONGOVTXN
+Government Consumption, constant LCU, millions|NECONGOVTKN
+Government Consumption, constant US$, millions|NECONGOVTKD
+Government Consumption, current LCU, millions|NECONGOVTCN
+Government Consumption, current US$, millions|NECONGOVTCD
+Gross Domestic Expenditure (GDE) (real 2005 USD)|NEGDETOTTKD
+Gross Domestic Expenditure (GDE) (real local currency units, various base years)|NEGDETOTTKN
+Gross Fixed Investment (implicit price deflator constant 2005 USD)|NEGDIFTOTXD
+Imports GNFS deflator, LCU|NEIMPGNFSXN
+Imports GNFS, constant LCU, millions|NEIMPGNFSKN
+Imports GNFS, constant US$, millions|NEIMPGNFSKD
+Imports GNFS, current LCU, millions|NEIMPGNFSCN
+Imports GNFS, current US$, millions|NEIMPGNFSCD
+Imports, GNFS (implicit price deflator constant 2005 USD)|NEIMPGNFSXD
+LCU: Euro|PANEUATLS
+Net Exports Other, BOP, current US$, millions|BNOTHCACD
+Private Consumption (implicit price deflator contant 2005 USD)|NECONPRVTXD
+Private Consumption deflator, LCU|NECONPRVTXN
+Private Consumption, constant LCU, millions|NECONPRVTKN
+Private Consumption, constant US$, millions|NECONPRVTKD
+Private Consumption, current LCU, millions|NECONPRVTCN
+Private Consumption, current US$, millions|NECONPRVTCD
+Real GDP per Capita (real local currency units, various base years)|GDPPCKN
+Terms of Trade|TOT
