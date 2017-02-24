@@ -2,14 +2,17 @@ from output_form1 import DemoForm
 from flask import Flask, render_template, request
 from function  import GDP_PCA_plot
 import sys, os, inspect
+from werkzeug.contrib.fixers import ProxyFix
+
 
 app = Flask(__name__)
+app.wsgi_app = ProxyFix(app.wsgi_app)
 app.config.update(dict(
     SECRET_KEY = 'your_secret_key',
     CSRF_ENABLED = True,
 ))
 
-@app.route('/main', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def index():
     dict1={}
     form = DemoForm(request.form)
@@ -28,4 +31,4 @@ def index():
                            result=result)
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(port=33035,debug=False)
