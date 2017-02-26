@@ -36,7 +36,7 @@ class Select2MultipleField(SelectMultipleField1):
 class DemoForm(FlaskForm):
     dropdown_label = label
     dropdown_plot_label = tuple_label
-    multi_select_plot = Select2MultipleField(u"Type of Plots", [],
+    multi_select_plot = Select2MultipleField(u"Development Indicators", [],
             choices=dropdown_plot_label,
             description=u" ",
             render_kw={"multiple": "multiple"})
@@ -45,7 +45,7 @@ class DemoForm(FlaskForm):
             choices=dropdown_label,
             description=u" ",
             render_kw={"multiple": "multiple"})
-    
+
     submit = SubmitField()
 
 
@@ -57,7 +57,7 @@ label = [
             ('APTA','Asia-Pacific Trade Agreement')
            # ('APEC','Asia-Pacific Economic Cooperation')
         )),
-        
+
         ('ASEAN Member States', (
             ('Brunei Darussalam', 'Brunei Darussalam'),
             ('Cambodia', 'Cambodia'),
@@ -70,7 +70,7 @@ label = [
             ('Thailand', 'Thailand'),
             ('Vietnam', 'Vietnam')
         )),
-        
+
         ('Asia-Pacific Trade Agreement States',(
             ('Bangladesh', 'Bangladesh'),
             ('China', 'China'),
@@ -79,7 +79,7 @@ label = [
             ('Lao PDR', 'Lao PDR'),
             ('Sri Lanka', 'Sri Lanka')
         )),
-        
+
         ('Asia-Pacific Economic Cooperation States',(
             (u'Namibia', u'Namibia'),
             (u'Korea, Rep.', u'Korea, Rep.'),
@@ -103,11 +103,10 @@ label = [
             (u'Singapore', u'Singapore'),
             (u'Thailand', u'Thailand')
             )),
-            
+
         tuple_state_label
         ]
 
 
 
         '''
-
