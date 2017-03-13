@@ -4,9 +4,9 @@ from wtforms import SelectField, SelectMultipleField, SubmitField
 from wtforms_components import SelectMultipleField as SelectMultipleField1
 import json
 
-dict_label=json.load(open('plot_dict.txt'))
+dict_label=json.load(open('dict_data/plot_dict.txt'))
 tuple_label=zip(tuple(dict_label.keys()),tuple(dict_label.keys()))
-state_label=json.load(open('country_dict.txt'))
+state_label=json.load(open('dict_data/country_dict.txt'))
 tuple_state_label=zip(tuple(state_label.keys()),tuple(state_label.keys()))
 tuple_state_label=('List of States',(tuple_state_label))
 

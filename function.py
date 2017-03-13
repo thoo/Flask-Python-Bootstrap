@@ -11,9 +11,9 @@ from quandl.errors.quandl_error import NotFoundError
 from bokeh.resources import CDN
 from bokeh.embed import components
 
-wwdi_dist=json.load(open('plot_dict.txt'))
-
-ql.ApiConfig.api_key="QhSTeKzp6X8stjtYXAHe"
+wwdi_dist=json.load(open('dict_data/plot_dict.txt'))
+quandl_api_key= json.load(open('.key')) # Api key is saved in .key file.
+ql.ApiConfig.api_key=quandl_api_key["Quardl_API_Key"]
 
 
 
@@ -75,7 +75,7 @@ APTA=['Bangladesh', 'China', 'India', 'Korea, Rep.', 'Lao PDR', 'Sri Lanka']
 APTA_color=['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33']
 group_dict={'APTA':APTA,'ASEAN':ASEAN,'APEC':APEC}
 color=d3['Category20'][20]
-country_dict=json.load(open('country_dict.txt'))
+country_dict=json.load(open('dict_data/country_dict.txt'))
 #wwdi_dist={"GDP growth (annual %)":"NY_GDP_MKTP_KD_ZG","GDP per capita (current US$)":"NY_GDP_PCAP_CD"}
 
 
@@ -129,7 +129,7 @@ def GDP_PCA_plot(country=['ASEAN'],plot_name=["GDP per capita (current US$)"]):
         if color_len > 12:
             color_dict=dict(zip(new_list,viridis(color_len)))
 
-        print(new_list)
+        #print(new_list)
         my_legend=[]
         for i in new_list:
             try:
